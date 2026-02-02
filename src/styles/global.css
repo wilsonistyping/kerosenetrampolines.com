@@ -63,7 +63,7 @@ b {
     font-weight: 700;
 }
 a {
-    color: var(--accent);
+    color: #666;
 }
 a:hover {
     color: var(--accent);
