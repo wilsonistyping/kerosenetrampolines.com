@@ -3,6 +3,20 @@ import BaseHead from "../components/BaseHead.astro";
 import Footer from "../components/Footer.astro";
 import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import { execSync } from "child_process";
+
+const version = execSync(
+    'git describe --tags --always 2>/dev/null || echo "v0.1"',
+)
+    .toString()
+    .trim();
+const updated = new Date()
+    .toLocaleDateString("en-US", {
+        month: "numeric",
+        day: "numeric",
+        year: "numeric",
+    })
+    .replace(/\//g, "-");
 ---
 
 <style></style>
@@ -15,27 +29,33 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <Header />
         <main>
             <table>
-                <thead style="background-color: #eef">
+                <thead>
                     <tr>
-                        <th class="width-auto" colspan="2"
+                        <th class="width-auto" colspan="2" rowspan="2"
                             ><h1 style="margin: 0">WILSON CHEN</h1>
                             <p style="margin: 0">
                                 Human-Centered Researcher, Visual Culture
                             </p>
                         </th>
+                        <th>Ver.</th>
+                        <th>{version}</th>
+                    </tr>
+                    <tr>
+                        <th>Upd.</th>
+                        <th>{updated}</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><b>Occupation</b></td>
-                        <td class="width-auto"
+                        <td class="width-min"><b>Occupation</b></td>
+                        <td colspan="3"
                             >Research Assistant, Vision Science @ Meta
                             (Contract)</td
                         >
                     </tr>
                     <tr>
-                        <td><b>Education</b></td>
-                        <td class="width-auto"
+                        <td class="width-min"><b>Education</b></td>
+                        <td colspan="3"
                             ><ul
                                 style="list-style-type: none; padding: 0; margin: 0"
                             >
@@ -47,8 +67,8 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
                         >
                     </tr>
                     <tr>
-                        <td><b>Previous Affiliations</b></td>
-                        <td
+                        <td class="width-min"><b>Previous Affiliations</b></td>
+                        <td colspan="3"
                             ><ul
                                 style="list-style-type: none; padding: 0; margin: 0"
                             >
