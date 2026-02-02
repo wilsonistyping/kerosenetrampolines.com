@@ -143,10 +143,19 @@ hr {
 }
 @media (max-width: 720px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
     main {
         padding: 1em;
+    }
+    table {
+        font-size: 1em;
+    }
+    th,
+    td {
+        padding: calc((var(--line-height) / 2))
+            calc(0.5ch - var(--border-thickness) / 2)
+            calc((var(--line-height) / 2) - (var(--border-thickness)));
     }
 }
 
