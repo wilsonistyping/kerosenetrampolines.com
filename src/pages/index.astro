@@ -5,7 +5,8 @@ import Header from "../components/Header.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
 ---
 
-<!doctype html>
+<style></style>
+
 <html lang="en">
     <head>
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
@@ -14,27 +15,34 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <Header />
         <main>
             <table>
-                <thead>
-                    <tr>
-                        <th>Wilson Chen</th>
-                    </tr>
-                </thead>
+                <tr>
+                    <th class="width-auto" rowspan="2" colspan="2"
+                        ><h1 style="line-height: 1; background-color: #dddd00;">
+                            WILSON CHEN
+                        </h1></th
+                    >
+                </tr>
                 <tbody>
                     <tr>
-                        <td class="width-min">Column 1</td>
-                        <td class="width-auto">Column 2</td>
-                        <td class="width-min">Column 3</td>
+                        <td><b>Occupation</b></td>
+                        <td class="width-auto"
+                            >Research Assistant, Vision Science @ Meta</td
+                        >
+                    </tr>
+                    <tr>
+                        <td rowspan="2"><b>Education</b></td>
+                        <td class="width-auto"
+                            >MS Human-Centered Design and Engineering, UW</td
+                        >
+                    </tr>
+                    <tr>
+                        <td class="width-auto"
+                            >BS Computer Science, Georgia Tech</td
+                        >
                     </tr>
                 </tbody>
             </table>
-            <p>
-                Monospace fonts are dear to many of us. Some find them more
-                readable, consistent, and beautiful, than their proportional
-                alternatives. Maybe we’re just brainwashed from spending years
-                in terminals? Or are we hopelessly nostalgic? I’m not sure. But
-                I like them, and that’s why I started experimenting with
-                all-monospace Web.
-            </p>
+            <p>I think about visual media and culture.</p>
         </main>
         <Footer />
     </body>
