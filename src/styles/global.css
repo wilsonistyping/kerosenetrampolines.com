@@ -7,6 +7,7 @@
  */
 
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+@import url("https://fonts.cdnfonts.com/css/jetbrains-mono-2");
 
 :root {
     --line-height: 1.2rem;
@@ -17,8 +18,8 @@
 
 body {
     font-family:
-        "Space Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
-        "Roboto Mono", "Segoe UI Mono", "Liberation Mono", monospace;
+        "JetBrains Mono", "Space Mono", ui-monospace, SFMono-Regular, Menlo,
+        Monaco, "Roboto Mono", "Segoe UI Mono", "Liberation Mono", monospace;
     margin: 0;
     padding: 0;
     text-align: left;
@@ -26,6 +27,7 @@ body {
     overflow-wrap: break-word;
     font-size: 16px;
     line-height: 1.5;
+    font-weight: 600;
 }
 main {
     width: 720px;
@@ -70,7 +72,7 @@ a:hover {
 }
 p {
     margin-bottom: 1em;
-    line-height: 1;
+    line-height: 1.2em;
 }
 .prose p {
     margin-bottom: 2em;
